@@ -24,7 +24,7 @@ function register() {
     });
     setTimeout(function () {
       if (vendedor) {
-        window.location.href = "dashboard/";
+        window.location.href = "dashboard/index.html";
       } else {
         window.location.href = "login.html";
       }
@@ -46,9 +46,7 @@ function login() {
       icon: "success",
       text: "Ingresando"
     });
-    setTimeout(function () {
-      window.location.href = "favorites.html";
-    }, 3000);
+    window.location.href = "dashboard/index.html";
   } else {
     alert(window.location.href = "favorites.html");
   }
