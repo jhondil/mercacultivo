@@ -32,6 +32,7 @@
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -100,32 +101,62 @@
         </nav>
 
         <div class="container d-flex justify-content-center align-items-center  vh-100 ">
-           
+
             <div class="w-50">
                 <div class="text-center">
                     <h2>Register</h2>
 
                 </div>
-                <div class="form-floating mb-3 ">
-                    <input type="email" class="form-control" id="floatingInput" placeholder=" ">
-                    <label for="floatingInput">Email address</label>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder=" " required>
+                        <label for="floatingPassword" required>Usuario</label>
+                    </div>
+
+                    <div class="form-floating mb-3 ">
+                        <input type="email" class="form-control" id="email" placeholder=" " required>
+                        <label for="floatingInput">Email address</label>
+                    </div>
+
+                    <div class="form-floating  mb-3">
+                        <input type="number" class="form-control" id="phone" placeholder=" " required>
+                        <label for="floatingInput">Telefono</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="address" placeholder=" " required>
+                        <label for="floatingPassword">Dirección</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="pass1" placeholder=" " required>
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="pass2" placeholder=" " required>
+                        <label for="floatingPassword">Confirmar Password</label>
+                    </div>
+                    <div class="d-flex justify-content-evenly">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="vendedor">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Vendedor
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="comprador" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            comprador
+                        </label>
+                    </div>
                 </div>
-                
-                <div class="form-floating  mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder=" ">
-                    <label for="floatingInput">Telefono</label>
+                    
+                </form>
+                <div class="mt-4 ">
+                    <button type="submit" onclick="register()" class="btn btn-primary w-100" value="">Registarse en
+                        MercaCultivo </button>
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
-                    <label for="floatingPassword">Dirección</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
-                    <label for="floatingPassword">Confirmar Password</label>
+               
+                <div class="mt-4 float-end">
+                    <a href="./register.html" class="">Ya tengo Cuenta</a>
                 </div>
             </div>
         </div>
@@ -225,6 +256,8 @@
         <script src="/assets/js/bootstrap.min.js"></script>
 
         <script src="assets/js/theme.js"></script>
+        <script src="assets/js/validation.js"></script>
+
 </body>
 
 </html>

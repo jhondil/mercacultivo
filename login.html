@@ -32,6 +32,7 @@
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
@@ -100,20 +101,31 @@
         </nav>
 
         <div class="container d-flex justify-content-center align-items-center  vh-100 ">
-           
+
             <div class="w-50">
                 <div class="text-center">
                     <h2>Login</h2>
 
                 </div>
+                <form action=""  method="get">
                 <div class="form-floating mb-3 ">
-                    <input type="email" class="form-control" id="floatingInput" placeholder=" ">
+                    <input type="email" class="form-control" id="email" placeholder=" " required>
                     <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder=" ">
+                    <input type="password" class="form-control" id="pass" placeholder=" ">
                     <label for="floatingPassword">Password</label>
                 </div>
+                
+            </form>
+            <div class="mt-4 ">
+                <button onclick="login()" class="btn btn-primary w-100" value="Registarse en
+                MercaCultivo">Replace document</button>
+            </div>
+                <div class="mt-4 float-end">
+                    <a href="./register.html" class="">No tengo Cuenta</a>
+                </div>
+
             </div>
         </div>
 
@@ -183,7 +195,7 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="border-bottom border-3"></div>
                 <div class="row flex-center my-3">
                     <div class="col-md-6 order-1 order-md-0">
@@ -213,6 +225,7 @@
         <script src="/assets/js/bootstrap.min.js"></script>
 
         <script src="assets/js/theme.js"></script>
+        <script src="assets/js/validation.js"></script>
 </body>
 
 </html>
