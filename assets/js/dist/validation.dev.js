@@ -1,3 +1,5 @@
+"use strict";
+
 function register() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
@@ -9,14 +11,7 @@ function register() {
   var comprador = document.getElementById("comprador").checked;
   console.log(vendedor);
 
-  if (
-    name == "" ||
-    email == "" ||
-    phone == "" ||
-    address == "" ||
-    pass1 == "" ||
-    pass2 == ""
-  ) {
+  if (name == "" || email == "" || phone == "" || address == "" || pass1 == "" || pass2 == "") {
     swal({
       icon: "error",
       text: "Te falta llenar el Campo"
@@ -27,7 +22,7 @@ function register() {
       text: name + " tu Registro ha sido completado",
       timer: 20000
     });
-    setTimeout(function() {
+    setTimeout(function () {
       if (vendedor) {
         window.location.href = "dashboard/index.html";
       } else {
@@ -52,45 +47,35 @@ function login() {
       text: "Ingresando",
       timer: 20000
     });
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.href = "dashboard/index.html";
     }, 2000);
-
-    
   } else {
     swal({
       icon: "success",
       text: "Ingresando",
       timer: 20000
     });
-    setTimeout(function() {
-     
-    window.location.href = "favorites.html";
+    setTimeout(function () {
+      window.location.href = "favorites.html";
     }, 2000);
-
   }
 }
-
 
 function perfilAdmin() {
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var phone = document.getElementById("phone").value;
   var pass1 = document.getElementById("pass1").value;
- 
   swal({
-        icon: "success",
-        text: name + " Campos actualizados",
-        timer: 20000
-      });
-
-
-  // if (
+    icon: "success",
+    text: name + " Campos actualizados",
+    timer: 20000
+  }); // if (
   //   name == "" ||
   //   email == "" ||
   //   phone == "" ||
   //   pass1 == "" 
-
   // ) {
   //   swal({
   //     icon: "error",
@@ -102,47 +87,31 @@ function perfilAdmin() {
   //     text: name + " Campos actualizados",
   //     timer: 20000
   //   });
-    
   // }
 }
-
 
 function addProduct() {
   var name = document.getElementById("name").value;
   var price = document.getElementById("price").value;
   var place = document.getElementById("place").value;
   var img = document.getElementById("img").value;
- 
 
-
-  if (
-    name == "" ||
-    price == "" ||
-    place == "" ||
-    img == "" 
-
-  ) {
+  if (name == "" || price == "" || place == "" || img == "") {
     swal({
       icon: "error",
       text: "Te falta llenar un Campo"
     });
-
-
   } else {
     swal({
       icon: "success",
       text: "El producto " + name + " fue agregado",
       timer: 20000
     });
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.href = "agregar-producto.html";
     }, 2000);
-    
   }
-}
-
-
-//swal({
+} //swal({
 //   icon: "success",
 //    text: name + "Registro completado",
 //   timer: 90000,
