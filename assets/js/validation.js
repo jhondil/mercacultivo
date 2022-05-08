@@ -22,21 +22,18 @@ function register() {
       text: "Te falta llenar el Campo"
     });
   } else {
-
     swal({
-       icon: "success",
-        text: name + " tu Registro ha sido completado",
-       timer: 20000,
-     })    
-      setTimeout(function() {
-        if (vendedor) {
-          window.location.href = "dashboard/index.html";
-        } else {
-          window.location.href = "login.html";
-        }
-      }, 2000)
-
-    
+      icon: "success",
+      text: name + " tu Registro ha sido completado",
+      timer: 20000
+    });
+    setTimeout(function() {
+      if (vendedor) {
+        window.location.href = "dashboard/index.html";
+      } else {
+        window.location.href = "login.html";
+      }
+    }, 2000);
   }
 }
 
@@ -51,19 +48,27 @@ function login() {
     });
   } else if (email == "admin@gmail.com") {
     swal({
-        icon: "success",
-        text: "Ingresando",
-       
-      });
-      
-      window.location.href = "dashboard/index.html"
-     
-     
-    }else{
-        alert(window.location.href = "favorites.html")
-    }
+      icon: "success",
+      text: "Ingresando",
+      timer: 20000
+    });
+    setTimeout(function() {
+      window.location.href = "dashboard/index.html";
+    }, 2000);
 
+    
+  } else {
+    swal({
+      icon: "success",
+      text: "Ingresando",
+      timer: 20000
+    });
+    setTimeout(function() {
+     
+    window.location.href = "favorites.html";
+    }, 2000);
 
+  }
 }
 
 //swal({
