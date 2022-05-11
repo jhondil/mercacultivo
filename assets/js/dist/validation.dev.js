@@ -111,6 +111,16 @@ function addProduct() {
       window.location.href = "agregar-producto.html";
     }, 2000);
   }
+}
+
+function pago() {
+  swal({
+    icon: "success",
+    text: "Gracias por comprar en MercaCultivo"
+  });
+  setTimeout(function () {
+    window.location.href = "tienda.html";
+  }, 2000);
 } //swal({
 //   icon: "success",
 //    text: name + "Registro completado",
