@@ -57,7 +57,7 @@ function login() {
       timer: 20000
     });
     setTimeout(function () {
-      window.location.href = "favorites.html";
+      window.location.href = "tienda.html";
     }, 2000);
   }
 }

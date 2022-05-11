@@ -65,7 +65,7 @@ function login() {
     });
     setTimeout(function() {
      
-    window.location.href = "favorites.html";
+    window.location.href = "tienda.html";
     }, 2000);
 
   }
